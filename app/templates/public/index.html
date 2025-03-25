@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body class="light-mode">
+    <h1>Index</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{ url_for('sobre') }}">Sobre mí</a></li>
+        <li><a href="{{ url_for('portafolio') }}">Portafolio</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()">Cambiar Tema</button>
+    <section>
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen destacada"
+        style="width: 15%; height: auto"
+      />
+      <h2>Bienvenido a mi página web</h2>
+      <p>
+        Hola, soy Raul Rivas, un apasionado estudiante en la carrera de sistemas computacionales.
+        Bienvenido a mi sitio web donde comparto mis proyectos y artículos sobre desarrollo web.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body class="light-mode">
+    <h1>Portafolio</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{ url_for('sobre') }}">Sobre mí</a></li>
+        <li><a href="{{ url_for('portafolio') }}">Portafolio</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()">Cambiar Tema</button>
+    <section>
+      <h2>Proyectos Realizados</h2>
+      <ul>
+        <li>
+          <h3>Blog personal</h3>
+          <img
+            src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+            alt="Imagen del Proyecto 1"
+            style="width: 15%; height: auto"
+          />
+          <p>
+            Un blog que contiene infrmacion acerca de mi y mis proyectos.
+            <a href="index.html">Ver proyecto</a>
+          </p>
+        </li>
+        <li>
+          <h3>Marketec</h3>
+          <img
+            src="{{ url_for('static', filename='imgs/marketec.png') }}"
+            alt="Imagen del Proyecto 2"
+            style="width: 15%; height: auto"
+          />
+          <p>
+            Aplicacion mobil en la que los estudiantes del tec pueden comprar y vender productos
+            dentro del tecnologico
+            <a href="https://dfke94f4$$$#FRGRTGWTGTRGTRGG.com">Ver proyecto</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="gallery">
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 1"
+        style="width: 10%; height: auto"
+      />
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 2"
+        style="width: 10%; height: auto"
+      />
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 3"
+        style="width: 10%; height: auto"
+      />
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 4"
+        style="width: 10%; height: auto"
+      />
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 5"
+        style="width: 10%; height: auto"
+      />
+      <img
+        src="{{ url_for('static', filename='imgs/foto.jpg') }}"
+        alt="Imagen 6"
+        style="width: 10%; height: auto"
+      />
+    </section>
+  </body>
+</html>

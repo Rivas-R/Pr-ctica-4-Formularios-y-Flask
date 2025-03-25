@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../../static/css/styles.css" />
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body class="light-mode">
+    <h1>Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{ url_for('sobre') }}">Sobre mí</a></li>
+        <li><a href="{{ url_for('portafolio') }}">Portafolio</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()">Cambiar Tema</button>
+    <section>
+      <article>
+        <h2>Artículo 1: Mi experiencia aprendiendo HTML</h2>
+        <p>Fecha: 16 de febrero de 2025</p>
+        <p>
+          En este artículo, comparto mi experiencia aprendiendo HTML. Ha sido un viaje emocionante y
+          lleno de descubrimientos...
+        </p>
+      </article>
+      <article>
+        <h2>Artículo 2: La importancia del CSS en el diseño web</h2>
+        <p>Fecha: 10 de febrero de 2025</p>
+        <p>
+          El CSS es una herramienta poderosa para dar estilo a nuestras páginas web. En este
+          artículo, exploro cómo el CSS puede transformar un sitio web simple en algo visualmente
+          atractivo...
+        </p>
+      </article>
+      <article>
+        <h2>Artículo 3: JavaScript: El lenguaje de la web</h2>
+        <p>Fecha: 5 de febrero de 2025</p>
+        <p>
+          JavaScript es esencial para crear páginas web interactivas. En este artículo, discuto las
+          características clave de JavaScript y cómo se puede utilizar para mejorar la experiencia
+          del usuario...
+        </p>
+      </article>
+    </section>
+    <section id="comments">
+      <h2>Comentarios</h2>
+      <form>
+        <label for="comment-name">Nombre:</label>
+        <input type="text" id="comment-name" name="comment-name" required />
+        <br />
+        <label for="comment-text">Comentario:</label>
+        <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="comment-list">
+        <!-- Aquí se mostrarán los comentarios -->
+      </div>
+    </section>
+  </body>
+</html>

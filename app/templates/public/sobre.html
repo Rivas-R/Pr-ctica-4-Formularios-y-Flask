@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body class="light-mode">
+    <h1>Sobre mí</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{ url_for('sobre') }}">Sobre mí</a></li>
+        <li><a href="{{ url_for('portafolio') }}">Portafolio</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()">Cambiar Tema</button>
+    <section>
+      <h2>Información Personal</h2>
+      <table>
+        <tr>
+          <th>Nombre</th>
+          <td>Raul Heriberto Rivas Alfaro</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>a22490084@itmexicali.edu.mx</td>
+        </tr>
+        <tr>
+          <th>Teléfono</th>
+          <td>686335****</td>
+        </tr>
+      </table>
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Libros</li>
+        <li>Programacion</li>
+        <li>Peliculas</li>
+      </ul>
+      <h2>Estudios</h2>
+      <ul>
+        <li>Ingenieria en sitemas computacionales</li>
+      </ul>
+      <h2>Intereses</h2>
+      <ul>
+        <li>Tecnologia</li>
+        <li>Arte</li>
+        <li>Musica</li>
+      </ul>
+    </section>
+  </body>
+</html>
